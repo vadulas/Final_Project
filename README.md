@@ -5,8 +5,8 @@ Project Requirements:
 2. Use Scikit-learn and/or another machine learning library.
 3. Use at least two of the below:
 
-| Python Pandas    | HTML/CSS/Bootstrap | JavaScript Leaflet | Google Cloud SQL
-| Python Matplolib | JavaScript Plotly  | SQL Database       | Amazon AWS
+| Python Pandas    | HTML/CSS/Bootstrap | JavaScript Leaflet | Google Cloud SQL\
+| Python Matplolib | JavaScript Plotly  | SQL Database       | Amazon AWS\
 |                  | JavaScropt D3.js   | MongoDB Database   | Tableau
 
 4. Host application using Heroku or a tool of choice.
