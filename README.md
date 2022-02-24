@@ -11,6 +11,6 @@ Project Requirements:
 
 4. Host application using Heroku or a tool of choice.
 
-Project Objectives:
-● Create a model that predicts a MLB baseball player’s likelihood of becoming an All Star player
+Project Objectives:\
+● Create a model that predicts a MLB baseball player’s likelihood of becoming an All Star player\
 ● Use different models to compare and contrast accuracy score
