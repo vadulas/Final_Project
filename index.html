@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>MLB All Star Prediction</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link 
+            rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        />
+
+        <link rel="stylesheet" href="Resources/styles.css">
+    </head>
+
+    <body>
+
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="requirements.html">CSV Requirements</a>
+          </div>
+
+          <br> 
+
+        <div class = "container">
+
+            <div class="jumbotron text-center">
+                <h1>MLB All-Star Player Prediction</h1>
+            </div>
+
+            <div class="row" id="history">
+                <div class="col-md-12">
+                     <div class= "allstar-history">
+                            <h3> Selection of Players </h3>
+                            <p> All-Stars are selected by fans for starting fielders, by managers for pitchers, and by managers and players for reserves. <br> <br>
+                                Each roster will have 32 players, including 20 position players and 12 pitchers. At least one player from each major league team must be selected. <br> <br>
+                                This model predicts the likelihood of players being selected as All-Star Players based on their statistics.
+                            </p>
+                        </div>
+                </div>
+            </div>
+  
+            <div class="row" id="file-upload">
+                <div class="col-md-4">
+                    <h3>Run Your Stats</h3> 
+                    <div class="drag-area">
+                        <div class="icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <span class="header">Drag & Drop</span>
+                        <span class="header"> or <span class ="button"> browse</span> <br>
+                        <input type="file" class="drag-area-input"/>
+                        <span class="support"> Supports csv files only</span>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-8">
+                      <div class="row" id="models">
+                          <h3>Tested Models</h3>
+                            <div class="models-table">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th div class="table-header">Ada Boost Classifier</th>
+                                    <th div class="table-header">Random Forest Classifier</th>
+                                    <th div class="table-header">Logistic Regression</th>
+                                </tr>
+                                <tr style="border-bottom: solid 1px">
+                                    <td style="padding: 8px">Accuracy</td>
+                                    <td>x</td>
+                                    <td>x</td>
+                                    <td>x</td>
+                                </tr>
+                                <tr style="border-bottom: solid 1px">
+                                    <td style="padding: 8px">Precision</td>
+                                    <td>x</td>
+                                    <td>x</td>
+                                    <td>x</td>
+                                </tr>
+                                <tr style="border-bottom: solid 1px">
+                                    <td style="padding: 8px">Recall</td>
+                                    <td>x</td>
+                                    <td>x</td>
+                                    <td>x</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px">F1-Score</td>
+                                    <td>x</td>
+                                    <td>x</td>
+                                    <td>x</td>
+                                </tr>
+                            </table>
+                            </div>
+                       </div>
+                  </div>
+            </div>
+  
+            <div class="row" id="results">
+                <div class="page-header">
+                    <h2 class="text-center"> Your Results</h2>
+                </div>
+  
+                <div class="results-desc">
+                    <p> Displayed below is the probability of entered statistics being selected as All-Star Player(s).</p>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="caption">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+          <script src="script.js"> </script>
+      </body>
+  </html>
