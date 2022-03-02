@@ -1,58 +1,46 @@
 #imports
-from flask import Flask, render_template, redirect, url_for, request, jsonify, flash
+import os
+from flask import Flask, render_template, request
 import pickle
 from data_prep import prep_data
 from werkzeug.utils import secure_filename
 import pandas as pd
-import os
 
-UPLOAD_FOLDER = 'uploaded-files'
-ALLOWED_EXTENSIONS = {'csv'}
+app_dir = os.path.dirname(__file__)
+UPLOAD_FOLDER = os.path.join(app_dir, "uploaded-files")
+# ALLOWED_EXTENSIONS = {'csv'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+# def allowed_file(filename):
+#     return '.' in filename and \
+#            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
+@app.route("/requirements")
+def reqs():
+    return render_template("requirements.html")
 
-@app.route("/predict", methods=['POST'])
+
+@app.route('/predict', methods=['GET','POST'])
 def predict():
-    content  = dict(request.files)
-    print("This works")
-    print(content)
+    content  = request.files['file']
+    # print(content)
 
     if request.method == 'POST':
-        # check if the post request has the file part
-        if 'fileinput' not in request.files:
-            # flash('No file part')
-            # return redirect(request.url)
-            return "inpput file not in request.files"
-        file = request.files['fileinput']
-        # If the user does not select a file, the browser submits an
-        # empty file without a filename.
-        if file.filename == '':
-            # flash('No selected file')
-            # return redirect(request.url)
-            return "file.filename was empty"
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        f = request.files['file']
+        filename = secure_filename(f.filename)
+        path = os.path.join(UPLOAD_FOLDER, filename)
+        f.save(path)
 
-            df = pd.read_csv(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            print(df)
-
-
-
-
-            # return redirect(url_for('download_file', name=filename))
+        df = pd.read_csv(path)
+        return df.to_html()
 
 
     # Load model
