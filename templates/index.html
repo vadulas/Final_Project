@@ -12,7 +12,7 @@
             href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         />
 
-        <link rel="stylesheet" href="Resources/styles.css">
+        <link rel="stylesheet" href="static/css/styles.css">
     </head>
 
     <body>
@@ -41,7 +41,8 @@
                         </div>
                 </div>
             </div>
-  
+            
+            
             <div class="row" id="file-upload">
                 <div class="col-md-4">
                     <h3>Run Your Stats</h3> 
@@ -51,13 +52,16 @@
                         </div>
                         <span class="header">Drag & Drop</span>
                         <span class="header"> or <span class ="button"> browse</span> <br>
-                        <form action="/predict" method="post"></form>
-                            <input type="file" class="drag-area-input" id="input-file">
-                            <input type="submit" value="Submit">
-                         </form>
+                         <br>
                         <span class="support"> Supports csv files only</span>
                     </div>
+                    <form action="/predict" method="post" enctype="multipart/form-data">
+                        <input type="file" class="drag-area-input" id="input-file" name="fileinput">
+                        <input type="submit" value="Submit">
+                    </form>
+                     
                   </div>
+               
   
                   <div class="col-md-8">
                       <div class="row" id="models">
@@ -118,6 +122,6 @@
 
             </div>
           </div>
-          <script src="script.js"> </script>
+          <!-- <script src="static/js/script.js"> </script> -->
       </body>
   </html>

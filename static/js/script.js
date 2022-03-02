@@ -53,7 +53,7 @@ dragArea.addEventListener('drop', (event) => {
 function displayFile (){
 
     console.log(file);
-    
+
     let fileType = file.type;
     
     let validExtension = ['text/csv']
@@ -78,7 +78,7 @@ function displayFile (){
 }
 
 function convertToJson (file){
-    d3.csv(file), function(data){
+    d3.json(file), function(data){
         console.log(data);
     }
 }

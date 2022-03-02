@@ -117,7 +117,7 @@ table{
 }
 
 body{
-    background-image: url('/Images/baseball.jpeg');
+    background-image: url('static/img/baseball.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
