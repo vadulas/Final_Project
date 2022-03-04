@@ -19,7 +19,6 @@
 
         <div class="topnav">
             <a class="active" href="index.html">Home</a>
-            <a href="requirements.html">CSV Requirements</a>
           </div>
 
           <br> 
@@ -95,11 +94,11 @@
                     <p> Displayed below is the probability of entered statistics being selected as an All-Star Player.</p>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="thumbnail" style="justify-content: center; text-align: center;">
-                        
-                            <p>{{ results }}</p>
-                        
+                <div class="row" id="results">
+                    <div class="col-md-12">
+                         <div class= "results-area">
+                                <h3> {{ results }} </h3>
+                        </div>
                     </div>
                 </div>
 
@@ -124,6 +123,30 @@
             bottom: 0px;
             left: 0px;
             background-color: rgba(0,0,0,1);
+        }
+
+        /* The animation code */
+        @keyframes example {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50% {background-color: green;}
+            100%  {background-color: blue;}
+        }
+
+        /* The element to apply the animation to */
+        .results-area {
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            background-color: gray;
+            animation-name: example;
+            animation-duration: 20s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
         }
         </style>
 

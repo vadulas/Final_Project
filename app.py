@@ -54,7 +54,7 @@ def predict():
     prediction = model.predict_proba(data)[:,1]
    
     prediction_percent = prediction * 100
-    results =f"{player} has the probability of {prediction_percent[0]}% becoming an All Star"
+    results =f"{player} has a {prediction_percent[0]}% probability of becoming an All Star"
    
     return render_template("index.html", results=results)
     
