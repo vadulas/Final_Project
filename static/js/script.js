@@ -16,7 +16,9 @@ input.addEventListener('change', function(){
 
     dragArea.classList.add('active');
 
-    displayFIle();
+    displayFile();
+
+    convertToJson(file);
 
 })
 
@@ -41,11 +43,17 @@ dragArea.addEventListener('drop', (event) => {
     event.preventDefault();
 
     file = event.dataTransfer.files[0];
-    displayFIle();
+    
+    displayFile();
+    
+    convertToJson(file);
     
 });
 
-function displayFIle (){
+function displayFile (){
+
+    console.log(file);
+
     let fileType = file.type;
     
     let validExtension = ['text/csv']
@@ -57,15 +65,20 @@ function displayFIle (){
             let fileURL = fileReader.result;
             let imgTag = `<img src="Images/csv-upload.png" alt="">`;
             dragArea.innerHTML = imgTag;
-        };
+            };
+
         fileReader.readAsDataURL(file);
 
      } else {
         alert('This file is not a CSV')
         dragArea.classList.remove('active');
         dragText.textContent = 'Drag & Drop';
-    }
-    
-
+    } 
     //console.log('File is dropped in the drag area');
+}
+
+function convertToJson (file){
+    d3.json(file), function(data){
+        console.log(data);
+    }
 }
