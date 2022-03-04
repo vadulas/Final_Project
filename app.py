@@ -56,11 +56,13 @@ def predict():
     probability = [1 if i >= 0.5 else 0 for i in prediction]
 
     if probability == 1: 
-        label =f"{player} will be an 'All Star' {probability}"
+        results =f"{player} will be an 'All Star' {probability}"
     else:
-        label = f"{player} will not be an 'All Star' {probability}"
+        results = f"{player} will not be an 'All Star' {probability}"
     # Return the required result
-    return label
+    return render_template("index.html", results=results)
+    
+    
 
     
 if __name__ == "__main__":
