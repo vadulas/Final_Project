@@ -36,7 +36,7 @@
                             <h3> Selection of Players </h3>
                             <p> All-Stars are selected by fans for starting fielders, by managers for pitchers, and by managers and players for reserves. <br> <br>
                                 Each roster will have 32 players, including 20 position players and 12 pitchers. At least one player from each major league team must be selected. <br> <br>
-                                This model predicts the likelihood of players being selected as All-Star Players based on their statistics.
+                                This model predicts the likelihood of <strong>hitters / batters</strong>  being selected as All-Star Players based on their statistics.
                             </p>
                         </div>
                 </div>
@@ -45,22 +45,21 @@
             
             <div class="row" id="file-upload">
                 <div class="col-md-4">
-                    <h3>Run Your Stats</h3> 
+                    <h3>Load the Bases</h3> 
                     <div class="drag-area">
                         <div class="icon">
                             <i class="fas fa-images"></i>
                         </div>
-                        <span class="header">Drag & Drop</span>
-                        <span class="header"> or <span class ="button"> browse</span> <br>
+                        <!-- <span class="header">Drag & Drop</span>
+                        <span class="header"> or <span class ="button"> browse</span> <br> -->
                          <br>
-                        <span class="support"> Supports csv files only</span>
-                    </div>
-                    <form action="/predict" method="post" enctype="multipart/form-data">
-                        <input type="file" class="drag-area-input" id="file" name="file">
-                        <input type="submit" value="Submit">
-                    </form>
-                     
-                  </div>
+                        <span class="support"> Supports csv files only</span> 
+                    </div>  
+                        <form action="/predict" method="post" enctype="multipart/form-data">
+                            <input type="file" class="drag-area-input" id="file" name="file" style="color: white;">
+                            <input type="submit" value="Submit">
+                        </form>
+                </div>
                
   
                   <div class="col-md-8">
@@ -70,33 +69,15 @@
                             <table>
                                 <tr>
                                     <th></th>
-                                    <th div class="table-header">Ada Boost Classifier</th>
-                                    <th div class="table-header">Random Forest Classifier</th>
                                     <th div class="table-header">Logistic Regression</th>
-                                </tr>
-                                <tr style="border-bottom: solid 1px">
-                                    <td style="padding: 8px">Accuracy</td>
-                                    <td>x</td>
-                                    <td>x</td>
-                                    <td>x</td>
-                                </tr>
-                                <tr style="border-bottom: solid 1px">
-                                    <td style="padding: 8px">Precision</td>
-                                    <td>x</td>
-                                    <td>x</td>
-                                    <td>x</td>
-                                </tr>
-                                <tr style="border-bottom: solid 1px">
-                                    <td style="padding: 8px">Recall</td>
-                                    <td>x</td>
-                                    <td>x</td>
-                                    <td>x</td>
+                                    <th div class="table-header">AdaBoost</th>
+                                    <th div class="table-header">Random Forest Classifier (RFC)</th>
                                 </tr>
                                 <tr>
-                                    <td style="padding: 8px">F1-Score</td>
-                                    <td>x</td>
-                                    <td>x</td>
-                                    <td>x</td>
+                                    <td style="padding: 8px">Accuracy</td>
+                                    <td>0.66</td>
+                                    <td>0.53</td>
+                                    <td>0.49</td>
                                 </tr>
                             </table>
                             </div>
@@ -104,7 +85,8 @@
                   </div>
             </div>
   
-            <div class="row" id="results">
+            <br> 
+            <!-- <div class="row" id="results">
                 <div class="page-header">
                     <h2 class="text-center"> Your Results</h2>
                 </div>
@@ -118,10 +100,30 @@
                         <div class="caption">
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
           </div>
           <!-- <script src="static/js/script.js"> </script> -->
       </body>
+
+      <style>
+        body {
+            background-image: url('static/img/baseball.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        body::before{
+            content: "";
+            position: relative;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0,0,0,1);
+        }
+        </style>
+
   </html>

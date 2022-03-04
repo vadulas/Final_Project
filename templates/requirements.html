@@ -27,6 +27,24 @@
               </h3>
           </div>
     </body>
+    
+    <style>
+        body {
+            background-image: url('static/img/baseball.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
+        body::before{
+            content: "";
+            position: relative;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0,0,0,1);
+        }
+        </style>
 
 </html>

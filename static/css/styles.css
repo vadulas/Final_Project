@@ -7,18 +7,16 @@
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
     font-size: 17px;
 }
   
-
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
   
-
 .topnav a.active {
     background-color: navy;
     color: white;
@@ -30,62 +28,6 @@
     padding: 10px;
     font-size: 16px;
     background-color: white;  
-}
-
-.drag-area{
-    width: 250px;
-    height: 250px;
-    padding: 25px;
-    display: flex;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    cursor: pointer;
-    color: #cccccc;
-    border: 2px dashed #6e7271;
-    border-radius: 10px;
-    background-color: white;
-}
-
-.drag-area .icon{
-    font-size: 40px;
-    color: #1683ff;
-}
-
-.drag-area .header{
-    font-size: 20px;
-    font-weight: 500;
-    color: #34495e;
-}
-
-.drag-area .support{
-    font-size: 12px;
-    color: gray;
-}
-.drag-area .button{
-    font: 20px;
-    font-weight: 500;
-    color: #1683ff;
-    cursor: pointer;
-}
-
-.drag-area.active {
-    border: 2px solid #6e7271;
-}
-
-.drag-area img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.drag-area .drag-area-input{
-    display: none;
 }
 
 .models-table{
@@ -110,28 +52,11 @@ table{
     padding: 10px;
 }
 
-.results-desc{
+/* .results-desc{
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-body{
-    background-image: url('static/img/baseball.jpeg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-body::before{
-    content: "";
-    position: relative;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,1);
-}
+} */
 
 .csv-reqs{
     border: 2px solid #6e7271;
@@ -140,3 +65,56 @@ body::before{
     font-size: 16px;
     background-color: white; 
 }
+
+.drag-area{
+    max-width: 50px;
+    max-width: 50px;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    /* font-weight: 500;
+    font-size: 20px; */
+    color: #cccccc;
+    border: 2px dashed #6e7271;
+    background-color: white;
+}
+
+.drag-area .icon{
+    font-size: 40px;
+    color: #1683ff;
+}
+
+.drag-area .header{
+    font-size: 20px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.drag-area .support{
+    font-size: 12px;
+    color: gray;
+}
+
+/* js script css */
+.drag-area .button{
+    font: 20px;
+    font-weight: 500;
+    color: #1683ff;
+    cursor: pointer;
+}
+
+.drag-area.active {
+    border: 2px solid #6e7271;
+}
+
+.drag-area img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.drag-area .drag-area-input{
+    display: none;
+}
+
