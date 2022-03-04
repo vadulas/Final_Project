@@ -40,13 +40,14 @@ def predict():
         f.save(path)
 
         df = pd.read_csv(path)
-        return df.to_html()
+        #return df.to_html()
 
 
     # Load model
-    model = pickle.load(open('abc.pkl', 'rb'))
+    model = pickle.load(open('lr.pkl', 'rb'))
 
-    data = prep_data(content)
+    data = prep_data(df)
+    
     prediction = model.predict(data)
     print(prediction)
      # Create labels based on predictions (assuming threshold of 0.5)
@@ -60,7 +61,5 @@ def predict():
     return label
 
     
-
-
 if __name__ == "__main__":
     app.run(debug=True)
