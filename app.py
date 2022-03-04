@@ -50,15 +50,11 @@ def predict():
 
     player = df['Player'][0]
     print(player)
-    prediction = model.predict(data)
-    print(prediction)
-     # Create labels based on predictions (assuming threshold of 0.5)
-    probability = [1 if i >= 0.5 else 0 for i in prediction]
+    prediction = model.predict_proba(data)[:,1]
 
-    if probability == 1: 
-        label =f"{player} will be an 'All Star' {probability}"
-    else:
-        label = f"{player} will not be an 'All Star' {probability}"
+    predict_percent = prediction * 100
+
+    label = f"{player} has {predict_percent}% probability of being an All Star"
     # Return the required result
     return label
 
