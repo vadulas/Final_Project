@@ -47,16 +47,18 @@ def predict():
     model = pickle.load(open('lr.pkl', 'rb'))
 
     data = prep_data(df)
-    
+
+    player = df['Player'][0]
+    print(player)
     prediction = model.predict(data)
     print(prediction)
      # Create labels based on predictions (assuming threshold of 0.5)
     probability = [1 if i >= 0.5 else 0 for i in prediction]
 
     if probability == 1: 
-        label = "Player will be an 'All Star'"
+        label =f"{player} will be an 'All Star' {probability}"
     else:
-        label = "Player will not be an 'All Star'"
+        label = f"{player} will not be an 'All Star' {probability}"
     # Return the required result
     return label
 
