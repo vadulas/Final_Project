@@ -1,4 +1,4 @@
-# Final Project - Machine Learning Integration
+# MLB AllStar Predictions - Machine Learning Integration Project
 
 **Project Requirements**:
 1. Use ML in the context of technologies learned.
@@ -14,11 +14,11 @@
 **MLB ALL STAR PREDICTION - Project Objectives**:\
 ● Create a model that predicts a batter's likelihood of becoming an All Star player\
 ● Use different models to compare and contrast accuracy score\
-● Allow users to stats and receive a prediction
+● Allow users to enter stats and receive a prediction
 
 Visit https://bc-final.herokuapp.com/ to view deployed app
 
-CSV Instructions:
+CSV Instructions for uploading to website:
 1. Duplicate test.csv provided in repository to local drive
 2. Insert statistics for desired player in csv (leave blank if known) and save
 3. Upload to model and click submit
