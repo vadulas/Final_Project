@@ -9,7 +9,7 @@
 | Python Matplolib | JavaScript Plotly  | SQL Database       | Amazon AWS\
 |                  | JavaScropt D3.js   | MongoDB Database   | Tableau
 
-4. Host application using Heroku or a tool of choice.\
+4. Host application using Heroku or a tool of choice.
 
 **MLB ALL STAR PREDICTION - Project Objectives**:\
 ● Create a model that predicts a batter's likelihood of becoming an All Star player\
@@ -19,6 +19,6 @@
 Visit https://bc-final.herokuapp.com/ to view deployed app
 
 CSV Instructions:
-1. Duplicate test.csv provided in repository to local drive\
-2. Insert statistics for desired player in csv (leave blank if known) and save\
-3. Upload to model and click submit\
+1. Duplicate test.csv provided in repository to local drive
+2. Insert statistics for desired player in csv (leave blank if known) and save
+3. Upload to model and click submit
